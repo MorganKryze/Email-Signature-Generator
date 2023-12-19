@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .signature {
+            font-family: Arial, sans-serif;
+            color: #444;
+            padding: 20px;
+            border-top: 3px solid #444;
+            display: flex;
+            align-items: stretch;
+        }
+        .signature .name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .signature .title {
+            font-size: 14px;
+            color: #999;
+        }
+        .signature .contact {
+            font-size: 14px;
+        }
+        .signature .social-media {
+            margin-top: 10px;
+        }
+        .signature .social-media a {
+            margin-right: 10px;
+            color: #444; 
+        }
+        .signature .logo {
+            margin-right: 20px;
+            padding-right: 20px; 
+            position: relative;
+            width: 120px;
+            height: 120px;
+        }
+        .signature .logo img {
+            border-radius: 50%;
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover;
+            border: 2px solid #444;
+        }
+        .signature .logo .overlay-logo {
+            position: absolute;
+            bottom: -5px;
+            right: 3px;
+            width: 30px;
+            height: 30px; 
+            z-index: 1;
+            background-color: #fff;
+            margin: 3px;
+            object-fit: contain;
+        }
+        .signature .details {
+            flex-grow: 1;
+            border-left: 1px solid #444; 
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="signature">
+        <div class="logo">
+            <img src="{{ photo }}" alt="Your Photo">
+            <a href="https://dvic.devinci.fr/fablab/">
+                <img src="https://raw.githubusercontent.com/MorganKryze/DVFL_mail_signature_generator/updates/src/resources/fablab.svg" class="overlay-logo" alt="Overlay Logo">
+            </a>
+        </div>
+        <div class="details">
+            <div class="name">{{ name }}</div>
+            <div class="title">{{ title }} | DeVinci Fablab</div>
+            <div class="contact">
+                <p>Email: <a href="mailto:{{ email }}">{{ email }}</a></p>
+                <p>Phone: +1-234-567-890</p>
+            </div>
+            <div class="social-media">
+                <a href="{{ website }}"><i class="fas fa-globe"></i></a>
+                <a href="{{ github }}"><i class="fab fa-github"></i></a>
+                <a href="{{ linkedin }}"><i class="fab fa-linkedin"></i></a>
+                <a href="{{ instagram }}"><i class="fab fa-instagram"></i></a> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
