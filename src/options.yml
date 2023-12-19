@@ -1,19 +1,13 @@
-photo: https://raw.githubusercontent.com/MorganKryze/DVFL_mail_signature_generator/updates/src/resources/default.jpg
+photo: https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/cat.jpg
 
-name: Your Name
-title: Your Title
+name: Your name
+title: Your title
 email: adress@example.com
 
 website: https://example.com
 github: https://github.com/example
 linkedin: https://linkedin.com/in/example
 instagram: https://instagram.com/example
-# twitter: https://twitter.com/example
+# slack: https://slack.com/example
 # facebook: https://facebook.com/example
 # youtube: https://youtube.com/example
-# reddit: https://reddit.com/user/example
-# stackoverflow: https://stackoverflow.com/users/example
-# medium: https://medium.com/@example
-
-
-
