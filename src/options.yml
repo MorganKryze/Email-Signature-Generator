@@ -1,9 +1,11 @@
-photo: https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/default.jpg
+#photo: https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/default.jpg
 
 name: Your name
 title: Your title
-email: address@example.com
+organization_name: Your organization
+organization_url: https://example.com
 workplace: Your workplace address
+email: address@example.com
 
 social_media:
   website: https://example.com

@@ -2,14 +2,14 @@
 
 > A personal or professional email signature generator.
 
-| ![alt text](src/resources/screenshot_logo.png) | ![alt text](src/resources/screenshot_photo.png) |
+| ![with logo 200px 490px](src/resources/screenshot_logo.png) | ![with photo 200px 490px](src/resources/screenshot_photo.png) |
 |:---:|:---:|
 
 ## Getting Started
 
 ### Prerequisites
 
-To use this template, you will need any editor that can open a yml file (like [Visual Studio Code](https://code.visualstudio.com/) for example).
+To use this template, you will need any editor that can open a yaml file (like [Visual Studio Code](https://code.visualstudio.com/) for example).
 
 ### Install
 
@@ -44,10 +44,11 @@ photo: https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/sr
 ```yml
 name: Your name
 title: Your title
-email: adress@example.com
+organization: Your organization
 workplace: Your workplace address
+email: address@example.com
 ```
-*To change the name, title, email or workplace, just replace the text with your own.*
+*To change the name, title, organization name, email or workplace, just replace the text with your own.*
 
 ```yml
 social_media:
