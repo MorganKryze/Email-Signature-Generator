@@ -1,13 +1,15 @@
-photo: https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/cat.jpg
+photo: https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/default.jpg
 
 name: Your name
 title: Your title
 email: adress@example.com
+workplace: La Défense, Courbevoie
 
-website: https://example.com
-github: https://github.com/example
-linkedin: https://linkedin.com/in/example
-instagram: https://instagram.com/example
-# slack: https://slack.com/example
-# facebook: https://facebook.com/example
-# youtube: https://youtube.com/example
+social_media:
+  website: https://example.com
+  github: https://github.com/example
+#  instagram: https://instagram.com/example
+  linkedin: https://linkedin.com/in/example
+  slack: https://slack.com/example
+#  facebook: https://facebook.com/example
+#  youtube: https://youtube.com/example

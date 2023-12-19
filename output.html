@@ -18,8 +18,13 @@
             font-size: 14px;
             color: #999;
         }
-        .signature .contact {
+        .signature .contact p {
             font-size: 14px;
+            color: #333;
+        }
+        .signature .contact p em {
+            font-style: normal;
+            color: #666;
         }
         .signature .social-media {
             margin-top: 10px;
@@ -35,12 +40,21 @@
             width: 120px;
             height: 120px;
         }
-        .signature .logo img {
+        
+        
+        .signature .logo .overlay-photo {
             border-radius: 50%;
             width: 100%; 
-            height: 100%; 
-            object-fit: cover;
+            height: auto; 
+            object-fit: contain;
             border: 2px solid #444;
+        }
+
+        .signature .logo .overlay-logo {
+            border-radius: 50%;
+            width: 100%; 
+            height: auto; 
+            object-fit: contain;
         }
         .signature .details {
             flex-grow: 1;
@@ -52,20 +66,23 @@
 <body>
     <div class="signature">
         <div class="logo">
-            <img src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/cat.jpg" alt="Profile picture">
+            
+                <img src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/default.jpg" class="overlay-photo" alt="Photo">
+            
         </div>
         <div class="details">
             <div class="name">Your name</div>
             <div class="title">Your title | <a href="https://dvic.devinci.fr/fablab/">DeVinci Fablab</a></div>
             <div class="contact">
+                <p><em>Workplace: La Défense, Courbevoie</em></p>
                 <p>Email: <a href="mailto:adress@example.com">adress@example.com</a></p>
-                <p>Phone: +1-234-567-890</p>
             </div>
             <div class="social-media">
-                <a href="https://example.com"><img src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/icons/globe.svg"></a>
-                <a href="https://linkedin.com/in/example"><img src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/icons/linkedin.svg"></a>
-                <a href="https://instagram.com/example"><img src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/icons/instagram.svg"></a> 
-                <a href="https://github.com/example"><img src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/icons/github.svg"></a>
+                
+				<a href="https://example.com"><img src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/icons/website.svg"></a>
+				<a href="https://github.com/example"><img src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/icons/github.svg"></a>
+				<a href="https://linkedin.com/in/example"><img src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/icons/linkedin.svg"></a>
+				<a href="https://slack.com/example"><img src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/icons/slack.svg"></a>
             </div>
         </div>
     </div>

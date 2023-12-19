@@ -3,45 +3,62 @@ from pathlib import Path
 import yaml
 from jinja2 import Environment, FileSystemLoader
 
+OPTIONS_FILENAME = "src/options.yml"
+HTML_TEMPLATE = "signature-template.html"
+OUTPUT_FILENAME = "output.html"
 
 def read_options(yml_path: str) -> dict:
-    """Read the options file and returns a dictionary with the options."""
+    """Read the options file and returns a dictionary with the options.
+
+    Args:
+    ----
+        yml_path (str): Path to the options file.
+
+    Returns:
+    -------
+        dict: Dictionary with the options.
+    """
     with Path.open(yml_path) as file:
         return yaml.safe_load(file)
 
 
 def generate_html(
     options: dict,
-    path_with_photo: str,
-    path_without_photo: str,
-    path_output_file: str,
 ) -> None:
-    """Generate the HTML file from the options."""
+    """Generate the HTML file with the options.
+
+    Args:
+    ----
+        options (dict): Dictionary with the options.
+
+    Returns:
+    -------
+        None
+    """
     env = Environment(
         loader=FileSystemLoader("src"),
-        autoescape=True,
+        autoescape=False,
     )
-    if "photo" in options:
-        template = env.get_template(path_with_photo)
-    else:
-        template = env.get_template(path_without_photo)
+    template = env.get_template(HTML_TEMPLATE)
 
-    output = template.render(options)
+    social_media_html = ""
+    for social_media, url in options["social_media"].items():
+        if url != "None":
+            social_media_html += (
+                f'\n\t\t\t\t<a href="{url}"><img'
+                f' src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/icons/{social_media}.svg"></a>'
+            )
+    options["social_media_html"] = social_media_html
 
-    with Path.open(path_output_file, "w") as file:
+    output = template.render(**options)
+    with Path.open(OUTPUT_FILENAME, "w") as file:
         file.write(output)
 
 
 if __name__ == "__main__":
-    # Paths
-    options_source = "src/options.yml"
-    html_template_logo = "signature-logo.html"
-    html_template_photo = "signature-photo.html"
-    output_file = "output.html"
-
     # Generate the HTML file
-    options = read_options(options_source)
-    generate_html(options, html_template_photo, html_template_logo, output_file)
+    options = read_options(OPTIONS_FILENAME)
+    generate_html(options)
 
     # Print acknowledgment
     print("HTML file generated successfully!")

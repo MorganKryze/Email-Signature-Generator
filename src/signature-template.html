@@ -18,8 +18,13 @@
             font-size: 14px;
             color: #999;
         }
-        .signature .contact {
+        .signature .contact p {
             font-size: 14px;
+            color: #333;
+        }
+        .signature .contact p em {
+            font-style: normal;
+            color: #666;
         }
         .signature .social-media {
             margin-top: 10px;
@@ -35,12 +40,22 @@
             width: 120px;
             height: 120px;
         }
-        .signature .logo img {
+        
+        
+        .signature .logo .overlay-photo {
             border-radius: 50%;
             width: 100%; 
-            height: 100%; 
-            object-fit: cover;;
-        } 
+            height: auto; 
+            object-fit: contain;
+            border: 2px solid #444;
+        }
+
+        .signature .logo .overlay-logo {
+            border-radius: 50%;
+            width: 100%; 
+            height: auto; 
+            object-fit: contain;
+        }
         .signature .details {
             flex-grow: 1;
             border-left: 1px solid #444; 
@@ -51,22 +66,23 @@
 <body>
     <div class="signature">
         <div class="logo">
-            <a href="https://dvic.devinci.fr/fablab/">
-                <img src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/icons/fablab.svg" class="overlay-logo" alt="DeVinci Fablab">
-            </a>
+            {% if photo %}
+                <img src="{{ photo }}" class="overlay-photo" alt="Photo">
+            {% else %}
+                <a href="https://dvic.devinci.fr/fablab/">
+                    <img src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/icons/fablab.svg" class="overlay-logo" alt="DeVinci Fablab">
+                </a>
+            {% endif %}
         </div>
         <div class="details">
             <div class="name">{{ name }}</div>
             <div class="title">{{ title }} | <a href="https://dvic.devinci.fr/fablab/">DeVinci Fablab</a></div>
             <div class="contact">
+                <p><em>Workplace: {{ workplace }}</em></p>
                 <p>Email: <a href="mailto:{{ email }}">{{ email }}</a></p>
-                <p>Phone: +1-234-567-890</p>
             </div>
             <div class="social-media">
-                <a href="{{ website }}"><img src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/icons/globe.svg"></a>
-                <a href="{{ linkedin }}"><img src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/icons/linkedin.svg"></a>
-                <a href="{{ instagram }}"><img src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/icons/instagram.svg"></a> 
-                <a href="{{ github }}"><img src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/icons/github.svg"></a>
+                {{ social_media_html }}
             </div>
         </div>
     </div>
