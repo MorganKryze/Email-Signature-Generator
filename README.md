@@ -3,8 +3,8 @@
 > A personal or professional email signature generator.
 
 <p float="left">
-  <img src="src/resources/screenshot_logo.png" width="200" />
-  <img src="src/resources/screenshot_photo.png" width="200" />
+  <img src="src/resources/screenshot_logo.png" width="50%" />
+  <img src="src/resources/screenshot_photo.png" width="50%" />
 </p>
 
 ## Getting Started
