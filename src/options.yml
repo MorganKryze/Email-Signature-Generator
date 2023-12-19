@@ -3,7 +3,7 @@ photo: https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/sr
 name: Your name
 title: Your title
 email: adress@example.com
-workplace: La Défense, Courbevoie
+workplace: Your workplace adress
 
 social_media:
   website: https://example.com
@@ -11,5 +11,5 @@ social_media:
 #  instagram: https://instagram.com/example
   linkedin: https://linkedin.com/in/example
   slack: https://slack.com/example
-#  facebook: https://facebook.com/example
+  facebook: https://facebook.com/example
 #  youtube: https://youtube.com/example
