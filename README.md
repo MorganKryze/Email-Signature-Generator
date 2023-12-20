@@ -2,14 +2,15 @@
 
 > A personal or professional email signature generator.
 
-| ![with logo 200px 490px](src/resources/screenshot_logo.png) | ![with photo 200px 490px](src/resources/screenshot_photo.png) |
-|:---:|:---:|
+| ![with logo 200px 500px](src/assets/screenshot_logo.png) | ![with photo 200px 500px](src/assets/screenshot_photo.png) |
+|:-----:|:-----:|
 
 ## Getting Started
 
 ### Prerequisites
 
-To use this template, you will need any editor that can open a yaml file (like [Visual Studio Code](https://code.visualstudio.com/) for example).
+* Python 3.11 or higher
+* An editor that supports yaml files (like [Visual Studio Code](https://code.visualstudio.com/)).
 
 ### Install
 
@@ -34,21 +35,39 @@ Once installed, it's pretty much it, just edit the `options.yml` file to your li
 python src/generate_signature.py
 ```
 
-Here are the different options you may want to change:
+#### Photo & logo
+
+To change the photo displayed in the signature, just replace the link with your own link, or the path to your custom image in the `assets` folder.
 
 ```yml
-photo: https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/default.jpg
+logo: https://raw.githubusercontent.com/MorganKryze/Email-Signature-Generator/main/src/assets/icons/fablab.svg
+#photo: https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/assets/default.jpg
 ```
-*To change the photo displayed in the signature, just replace the link with your own link, or the path to your custom image in the assets folder.*
+
+> [!NOTE]
+> You can switch between a photo or a logo by commenting out the line you don't want to use with a `#`. Even more, if you do not want any of these, just comment out both lines.
+
+![with nothing 200px 500px](src/assets/screenshot_nothing.png)
+
+> [!WARNING]
+> the photo will be displayed by default if both are uncommented.
+
+#### About
+
+Here, **DO NOT** put a `#` at the beginning of the lines, just replace the text with your own. The organization url will be put in the logo and the email will be put in the mailto link.
 
 ```yml
 name: Your name
 title: Your title
-organization: Your organization
+organization_name: Your organization
+organization_url: https://example.com
 workplace: Your workplace address
 email: address@example.com
 ```
-*To change the name, title, organization name, email or workplace, just replace the text with your own.*
+
+#### Social media
+
+To change the social media links, just replace the links with your own. If you don't want to display a social media, just comment it out with a `#` or replace the link with `None`.
 
 ```yml
 social_media:
@@ -60,7 +79,9 @@ social_media:
   facebook: https://facebook.com/example
   youtube: None #https://youtube.com/example
 ```
-*To change the social media links, just replace the links with your own. If you don't want to display a social media, just comment it out with a `#` or replace the link with `None`.*
+
+> [!NOTE]
+> You can switch the order of the social media by changing the order of the lines.
 
 ### Supported social media
 

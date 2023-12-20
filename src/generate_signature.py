@@ -46,7 +46,7 @@ def generate_html(
         if url != "None":
             social_media_html += (
                 f'\n\t\t\t\t<a href="{url}"><img'
-                f' src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/icons/{social_media}.svg"></a>'
+                f' src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/assets/icons/{social_media}.svg"></a>'
             )
     options["social_media_html"] = social_media_html
 

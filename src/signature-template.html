@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>Signature</title>
     <style>
         .signature {
             font-family: Arial, sans-serif;
@@ -40,8 +42,6 @@
             width: 120px;
             height: 120px;
         }
-        
-        
         .signature .logo .overlay-photo {
             border-radius: 50%;
             width: 100%; 
@@ -49,7 +49,6 @@
             object-fit: contain;
             border: 2px solid #444;
         }
-
         .signature .logo .overlay-logo {
             border-radius: 50%;
             width: 100%; 
@@ -61,22 +60,27 @@
             border-left: 1px solid #444; 
             padding-left: 20px;
         }
+        .logo-absent .details {
+            margin-left: 0;
+        }
     </style>
 </head>
 <body>
     <div class="signature">
+        {% if photo or logo %}
         <div class="logo">
             {% if photo %}
                 <img src="{{ photo }}" class="overlay-photo" alt="Photo">
-            {% else %}
-                <a href="https://dvic.devinci.fr/fablab/">
-                    <img src="https://raw.githubusercontent.com/MorganKryze/Signature-Generator/main/src/resources/icons/fablab.svg" class="overlay-logo" alt="DeVinci Fablab">
+            {% elif logo %}
+                <a href="{{ organization_url }}">
+                    <img src="{{ logo }}" class="overlay-logo" alt="DeVinci Fablab">
                 </a>
             {% endif %}
         </div>
+        {% endif %}
         <div class="details">
             <div class="name">{{ name }}</div>
-            <div class="title">{{ title }} | <a href="{{ organization_url }}">{{ organization_name }}</a></div>
+            <div class="title">{{ title }} | {{ organization_name }}</a></div>
             <div class="contact">
                 <p>Workplace: {{ workplace }}</p>
                 <p>Email: <a href="mailto:{{ email }}">{{ email }}</a></p>
