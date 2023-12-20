@@ -37,7 +37,7 @@ python src/generate_signature.py
 
 #### Photo & logo
 
-To change the photo displayed in the signature, just replace the link with your own link, or the path to your custom image in the `assets` folder.
+To change the photo displayed in the signature, just replace the link with your own link, or the path to your custom image in the `assets` folder. (I recommend using 120px by 120px images or svg files)
 
 ```yml
 logo: https://raw.githubusercontent.com/MorganKryze/Email-Signature-Generator/main/src/assets/icons/fablab.svg
@@ -85,8 +85,6 @@ social_media:
 
 ### Supported social media
 
-Here is the list of supported social media:
-
 * Website
 * Github
 * Instagram
@@ -94,6 +92,13 @@ Here is the list of supported social media:
 * Slack
 * Facebook
 * Youtube
+
+### Supported email clients
+
+* [Apple Mail](https://communities.apple.com/fr/thread/253165587?sortBy=best)
+* [Thunderbird](https://www.youtube.com/watch?v=oPP4_i_kfQE)
+* [Outlook (Windows)](https://www.youtube.com/watch?v=gL5WfVg55c4)
+* [Gmail](https://www.youtube.com/watch?v=DpW2XJkYYDQ)
 
 ## License
 
