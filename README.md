@@ -10,7 +10,8 @@
 ### Prerequisites
 
 * Python 3.11 or higher
-* An editor that supports yaml files (like [Visual Studio Code](https://code.visualstudio.com/)).
+* An editor that supports yaml files like [Visual Studio Code](https://code.visualstudio.com/).
+* An editor that supports HTML and XML files like NotePad on Windows or TextEdit on MacOs (with the option to display the code activated).
 
 ### Install
 
@@ -77,7 +78,8 @@ social_media:
   linkedin: https://linkedin.com/in/example
   slack: https://slack.com/example
   facebook: https://facebook.com/example
-  youtube: None #https://youtube.com/example
+  youtube: None 
+  twitter: https://twitter.com/example
 ```
 
 > [!NOTE]
