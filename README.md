@@ -92,6 +92,7 @@ social_media:
 * Slack
 * Facebook
 * Youtube
+* Twitter
 
 ### Supported email clients
 
