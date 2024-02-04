@@ -33,7 +33,7 @@ pip install -r requirements.txt
 Once installed, it's pretty much it, just edit the `options.yml` file to your liking and execute this command to apply your changes:
 
 ```bash
-python src/generate_signature.py
+python src
 ```
 
 #### Photo & logo

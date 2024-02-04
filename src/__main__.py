@@ -62,4 +62,4 @@ if __name__ == "__main__":
     generate_html(options)
 
     # Print acknowledgment
-    print("HTML file generated successfully!")
+    print("generator: HTML file generated successfully!")
